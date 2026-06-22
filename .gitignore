@@ -167,3 +167,7 @@ datasets/*
 outputs
 wandb/
 weights/
+
+# Videos/Images
+*.mp4
+*.png
