@@ -305,7 +305,9 @@ class NewVideosInferenceRunner(BaseRunner):
         tracker = build_tracker(self._cfg)
 
         # Generate frames directory for processing
-        frame_dir = process_video(self._input_vid_path)
+        frame_dir = process_video(
+            self._input_vid_path, filter=self._cfg.get("remove_duplicates", False)
+        )
         print("Finished preprocess_video")
 
         t_elapsed_all = 0.0
